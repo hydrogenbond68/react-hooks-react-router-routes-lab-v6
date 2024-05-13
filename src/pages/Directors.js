@@ -17,13 +17,14 @@ function Directors() {
   return (
     <>
       <header>
-        {/* What component should go here? */}
+        <NavBar />
       </header>
       <main>
-        {/* Director info here! */}
+        <h1>Directors Page</h1>
+        {directorList}
       </main>
     </>
   );
-};
+}
 
 export default Directors;

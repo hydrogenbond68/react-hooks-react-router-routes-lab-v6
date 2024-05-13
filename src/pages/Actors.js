@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import NavBar from "../components/NavBar";
 
 function Actors() {
-  const [actor, setActors] = useState([])
+  const [actors, setActors] = useState([])
 
   useEffect(() =>{
     fetch("http//lovalhost:4000/actors")
@@ -14,16 +14,16 @@ function Actors() {
   const actorList = actors.map(actor => <Card key={actor.id} name={actor.name} movies={actor.movies} />)
 
   return (
-   <>
-   <header>
-    <NavBar />
-    </header></>
-    <main>
-      <h1>Actors Page</h1>
-      {actorList}
-    </main>
-    </>
-  );
-};
+ <>
+<header>
+  <NavBar />
+</header>
+<main>
+  <h1>Actors Page</h1>
+  {actorList}
+</main>
+</>
+);
+}
 
 export default Actors;
